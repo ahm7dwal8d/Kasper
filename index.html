@@ -7,6 +7,7 @@
     <title>Kasper</title>
     <link rel="stylesheet" href="css/normalze.css">    
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
         <link rel="stylesheet" href="css/kasper.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
 <body>
     <!-- Start header -->
     <div class="header">
-        <div class="continer">
+        <div class="container">
             <div class="logo">
                 <img src="images/monster.png" alt="logo">
                 <h3>Kasper</h3>
@@ -61,14 +62,14 @@
     <!-- End landing -->
     <!-- Start Services -->
     <div class="services" id="services">
-        <div class="continer">
+        <div class="container">
             <div class="main-header">
                 <h2>Services</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus corporis voluptatum nostrum quam soluta blanditiis atque veniam eum odit omnis, nam temporibus asperiores commodi illum eaque ipsa, corrupti expedita tempore?
                 </p>
             </div>
-            <div class="srv-continer">
+            <div class="srv-container">
                 <div class="srv-box">
                     <i class="fas fa-tablet-alt fa-3x"></i>
                     <div class="text">
@@ -103,21 +104,35 @@
     <!-- End Services -->
     <!-- Start Desgin -->
     <div class="design">
-        <div class="img"><img src="images/Mobile.jpg" alt=""></div>
+        <div class="img">
+            <img src="images/mobile.png" alt="">
+        </div>
         <div class="text">
             <h2>Our Design Comes With...</h2>
             <ul>
-                <li>Responsive Design</li>
-                <li>Modern And Clean Design</li>
-                <li>Clean Code</li>
-                <li>Browser Friendly</li>
+                <li>
+                    <i class="fas fa-desktop"></i>
+                    Responsive Design
+                </li>
+                <li>
+                    <i class="fas fa-desktop"></i>
+                    Modern And Clean Design
+                </li>
+                <li>
+                    <i class="fas fa-desktop"></i>
+                    Clean Code
+                </li>
+                <li>
+                    <i class="fas fa-desktop"></i>
+                    Browser Friendly
+                </li>
             </ul>
         </div>
     </div>
     <!-- End Desgin -->
     <!-- Start portfolio -->
     <div class="portfolio" id="portfilo">
-        <div class="continer">
+        <div class="container">
                 <div class="main-header">
                     <h2>Portfolio</h2>
                     <p>
@@ -126,65 +141,65 @@
                 </div> 
                 <div class="shuffled">
                     <ul>
-                        <li class="active">All</li>
-                        <li>App</li>
-                        <li>Web</li>
-                        <li>Print</li>
+                        <li class="active" data-class=".box">All</li>
+                        <li data-class=".App">App</li>
+                        <li data-class=".Web">Web</li>
+                        <li data-class=".Print">Print</li>
                     </ul>
                 </div>
         </div>
-        <div class="imges-continer">
-            <div class="box">
-                <img src="images/shuffle 1.jpg" alt="">
+        <div class="imges-container">
+            <div class="box Print">
+                <img src="images/shuffle-01.jpg" alt="Print">
                 <div class="caption">
                     <h4>Awsome Image</h4>
                     <p>photography</p>
                 </div>
             </div>
-            <div class="box">
-                <img src="images/shuffle 2.jpg" alt="">
+            <div class="box App">
+                <img src="images/shuffle-02.jpg" alt="App">
                 <div class="caption">
                     <h4>Awsome Image</h4>
                     <p>photography</p>
                 </div>
             </div>
-            <div class="box">
-                <img src="images/Design.jpg" alt="" class="three">
+            <div class="box Web">
+                <img src="images/shuffle-03.jpg" alt="Web">
                 <div class="caption">
                     <h4>Awsome Image</h4>
                     <p>photography</p>
                 </div>
             </div>
-            <div class="box">
-                <img src="images/shuffle 4.jpg" alt="">
+            <div class="box App">
+                <img src="images/shuffle-04.jpg" alt="App">
                 <div class="caption">
                     <h4>Awsome Image</h4>
                     <p>photography</p>
                 </div>
             </div>
-            <div class="box">
-                <img src="images/shuffle 5.jpg" alt="">
+            <div class="box Print">
+                <img src="images/shuffle-05.jpg" alt="Print">
                 <div class="caption">
                     <h4>Awsome Image</h4>
                     <p>photography</p>
                 </div>
             </div>
-            <div class="box">
-                <img src="images/shuffle 6.jpg" alt="">
+            <div class="box Web">
+                <img src="images/shuffle-06.jpg" alt="Web">
                 <div class="caption">
                     <h4>Awsome Image</h4>
                     <p>photography</p>
                 </div>
             </div>
-            <div class="box">
-                <img src="images/shuffle 7.jpg" alt="">
+            <div class="box Print">
+                <img src="images/shuffle-07.jpg" alt="Print">
                 <div class="caption">
                     <h4>Awsome Image</h4>
                     <p>photography</p>
                 </div>
             </div>
-            <div class="box">
-                <img src="images/shuffle 8.jpg" alt="">
+            <div class="box Web">
+                <img src="images/shuffle-08.jpg" alt="Web">
                 <div class="caption">
                     <h4>Awsome Image</h4>
                     <p>photography</p>
@@ -197,7 +212,7 @@
     <!-- Start Video -->
     <div class="video">
         <video autoplay loop muted>
-            <source src="images/video.mp4" type="video/mp4">
+            <source src="images//video.mp4" type="video/mp4">
         </video>
         <div class="text">
             <h2>Super Awsome Video Here </h2>
@@ -208,38 +223,38 @@
     <!-- End Video -->
     <!-- Start About -->
     <div class="about" id="about">
-        <div class="continer">
+        <div class="container">
             <div class="main-header">
                 <h2>About</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus corporis voluptatum nostrum quam soluta blanditiis atque veniam eum odit omnis, nam temporibus asperiores commodi illum eaque ipsa, corrupti expedita tempore?
                 </p>
             </div>
-            <img src="images/about.jpg" alt="">
+            <img src="images/about.png" alt="">
         </div>
     </div>
     <!-- End About -->
     <!-- Start State -->
     <div class="state">
-        <div class="continer">
+        <div class="container">
             <div class="box">
                 <i class="fas fa-mug-hot"></i>
-                <div class="number">1.263</div>
+                <div class="number" data-goal="1263">0</div>
                 <p>Coffe Drink</p>
             </div>
             <div class="box">
                 <i class="fas fa-folder"></i>
-                <div class="number">256</div>
+                <div class="number" data-goal="256">0</div>
                 <p>Complete Projects</p>
             </div>
             <div class="box">
                 <i class="fas fa-envelope"></i>
-                <div class="number">1.743</div>
+                <div class="number" data-goal="1743">0</div>
                 <p>Mail Send</p>
             </div>
             <div class="box">
                 <i class="fas fa-trophy"></i>
-                <div class="number">17</div>
+                <div class="number" data-goal="17">0</div>
                 <p>Awards Received</p>
             </div>
         </div>
@@ -247,7 +262,7 @@
     <!-- End State -->
     <!-- Start Skills -->
     <div class="our-skills">
-        <div class="continer">
+        <div class="container">
             <div class="testimeonials">
                 <h2>Testimeonials</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nesciunt sed explicabo laudantium assumenda voluptatum consectetur vel sint, inventore consequatur quia dolorum. Sapiente rerum magni deserunt esse fugit eveniet voluptatibus!
@@ -284,26 +299,26 @@
                     <div class="prog-holder">
                         <h4>ADOBE</h4>
                         <div class="prog">
-                            <span style="width:90%" data-progress="90%"></span>
+                            <span data-progress="90%"></span>
                         </div>
                         
                     </div>
                     <div class="prog-holder">
                         <h4>Html &amp; CSS</h4>
                         <div class="prog">
-                            <span style="width:70%"  data-progress="70%"></span>
+                            <span  data-progress="70%"></span>
                         </div>
                     </div>
                     <div class="prog-holder">
                         <h4>JavaScript</h4>
                         <div class="prog">
-                            <span style="width:80%" data-progress="80%"></span>
+                            <span  data-progress="80%"></span>
                         </div>
                     </div>
                     <div class="prog-holder">
                         <h4>PhP</h4>
                         <div class="prog">
-                            <span style="width:90%" data-progress="90%"></span>
+                            <span data-progress="90%"></span>
                         </div>
                 </div>
             </div>
@@ -312,7 +327,7 @@
     <!-- End Skills -->
     <!-- Start Quote -->
     <div class="quote">
-        <div class="continer">
+        <div class="container">
             <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. In doloremque temporibus a dicta voluptatem quo.</q>
             <span>John Doe</span>
         </div>
@@ -320,7 +335,7 @@
     <!-- End Quote -->
     <!-- Start Pricing -->
     <div class="pricing" id="pricing">
-        <div class="continer">
+        <div class="container">
         <div class="main-header" style="flex-basis: 100%;">
             <h2>pricing</h2>
             <p>
@@ -396,7 +411,7 @@
     <!-- End Pricing -->
     <!-- Start Subscribe -->
     <div class="subscribe">
-        <div class="continer">
+        <div class="container">
             <form action="">
                 <i class="fas fa-envelope fa-2x"></i>
                 <input type="email" name="mail" placeholder="Your Email">
@@ -410,7 +425,7 @@
     <!-- End Subscribe -->
     <!-- Start Contact -->
     <div class="contact-us" id="contact">
-        <div class="continer">
+        <div class="container">
             <div class="main-header">
                 <h2>Contact</h2>
                 <p>
@@ -439,7 +454,7 @@
     <!-- End Contact -->
     <!-- Start Footer-->
     <div class="footer">
-        <div class="continer">
+        <div class="container">
             <div class="logo">
                 <img src="images/monster.png" alt="logo">
                 <p class="logo">Kasper</p>
@@ -451,7 +466,7 @@
                 <i class="fas fa-home fa-2x"></i>
                 <i class="fab fa-linkedin fa-2x"></i>
             </div>
-            <p class="copyright">&copy;2021 <span>Kasper</span> All Right Reversed</p>
+            <p class="copyright">&copy; 2021 <span>Kasper</span> All Right Reversed</p>
         </div>
         
     </div>
@@ -459,7 +474,6 @@
     <button class="up">
         up
     </button>
-
     <script src="js/script.js"></script>
 </body>
 </html>
