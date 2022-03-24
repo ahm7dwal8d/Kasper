@@ -171,9 +171,11 @@ body {
     justify-content: flex-end;
     align-items: center;
 }
+
 .container .link .bar {
     color: white;
     font-size: 22px;
+    cursor: pointer;
 }
 @media (min-width:768px) {
     .container .link .bar{
@@ -186,9 +188,6 @@ body {
 @media (max-width:767px) {
 .container .link ul {
     display: none;
-}
-.container .link .bar:hover + ul {
-    display: flex;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -196,7 +195,8 @@ body {
     background-color: rgb(0 0 0 / 50%);
     width: 100%;
 }
-.container .link .bar:hover + ul li a {
+
+.container .link ul li a {
     padding: 15px;
 }
 }
@@ -858,6 +858,11 @@ body {
     font-size: 30px;
     margin-bottom: 20px;
 }
+@media (max-width: 991px) {
+    .quote q {
+        font-size: 16px;
+    }
+}
 /* End Quote */
 /* Start Pricing */
 .pricing {
@@ -931,6 +936,10 @@ body {
     top: 80%;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 .pricing .plan .foot a {
     padding: 20px;
@@ -972,6 +981,11 @@ body {
     height: 30vh;
     color: white;
 }
+@media (max-width: 991px) {
+    .subscribe {
+        display: none;
+    }
+}
 .subscribe::before {
     content: '';
     position: absolute;
@@ -1009,6 +1023,10 @@ body {
     top: 50%;
     transform: translateY(-50%);
     left: 15px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 .subscribe .container form input[type="email"] {
     border: 1px solid white;
@@ -1019,6 +1037,7 @@ body {
     width: calc(100% - 130px);
     position: relative;
 }
+
 .subscribe .container form input[type="submit"]{
     width: 130px;
     padding: 10px 20px;
@@ -1229,5 +1248,5 @@ button.up {
 
 button.up.active {
     opacity: 1;
-    bottom: 100px;
+    bottom: 60px;
 }

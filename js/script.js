@@ -1,3 +1,8 @@
+
+$(".header i").click(function () {
+    $(".header ul").slideToggle("2000")
+})
+
 // Portfolio Section 
 
 let PortfolioHead = document.querySelectorAll(".portfolio li")
@@ -160,6 +165,7 @@ window.onscroll = function () {
     Started = true
 
     // Skills Section  
+
     if (window.scrollY >= (SkillsOffsetTop + SkillsHeight - PageHeight)) {
 
         SkillsSpan.forEach((span) => {
