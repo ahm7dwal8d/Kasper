@@ -160,9 +160,9 @@ window.onscroll = function () {
 
         }
 
+        Started = true
     }
 
-    Started = true
 
     // Skills Section  
 
