@@ -112,6 +112,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 2;
+    overflow: hidden;
 }
 @media (max-width:767px) {
     .header {
@@ -199,12 +200,16 @@ body {
 }
 .container .link ul a {
     display: block;
-    padding: 40px 10px;
+    padding: 40px 5px;
     text-decoration: none;
     font-size: 14px;
     transition: 0.4s;
     position: relative;
     color: white;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
 }
 .container .link ul a.active,
 .container .link ul a:hover {
@@ -226,6 +231,10 @@ body {
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 .container .input i:hover {
     color: var(--main-color);
@@ -258,6 +267,10 @@ body {
     color: white;
     display: flex;
     justify-content: flex-end;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 .landing .text .content {
     max-width: 500px;
@@ -286,6 +299,10 @@ body {
     top: 50%;
     transform: translateY(-50%);
     color: white;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 @media (max-width:767px) {
     .landing .change-backround {
@@ -304,6 +321,10 @@ body {
     bottom: 30px;
     transform: translateX(-50%);
     display: flex;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 .landing .bullets li {
     width: 20px;
@@ -321,6 +342,7 @@ body {
 .services {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
+    overflow: hidden;
 }
 @media (min-width:768px) {
     .services .srv-container {
@@ -423,6 +445,7 @@ body {
 .portfolio {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
+    overflow: hidden;
 }
 
 .container .shuffled ul {
@@ -477,9 +500,17 @@ body {
 .imges-container .box img {
     max-width: 100%;
     transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 .imges-container .box:hover img {
     transform: rotate(3deg) scale(1.1);
+    -webkit-transform: rotate(3deg) scale(1.1);
+    -moz-transform: rotate(3deg) scale(1.1);
+    -ms-transform: rotate(3deg) scale(1.1);
+    -o-transform: rotate(3deg) scale(1.1);
 }
 .imges-container .box img.three {
     height: 98.5%;
@@ -492,7 +523,11 @@ body {
     bottom: -100px;
     width: 100%;
     margin-top: 10px;
-    height: 70px
+    height: 70px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 .imges-container .box .caption h4 {
     font-weight: normal;
@@ -511,6 +546,10 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 .overly-box {
     position: fixed;
@@ -555,6 +594,10 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 .box-head {
     padding: 10px 0 12px;
@@ -567,6 +610,7 @@ body {
 /* Start Video  */
 .video {
     position: relative;
+
 }
 .video::before {
     content: '';
@@ -633,6 +677,7 @@ body {
     padding-bottom: var(--main-padding);
     background-image: url(../images/stats.png);
     background-size: cover;
+    overflow: hidden;
 }
 .state::before {
     content: '';
@@ -683,6 +728,10 @@ body {
     border-radius: 50%;
     align-items: center;
     margin: 40px auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .state .container .box .number {
     font-size: 40px;
@@ -697,6 +746,7 @@ body {
 .our-skills {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
+    overflow: hidden;
 }
 .our-skills .container {
     display: flex;
@@ -730,6 +780,10 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 @media (max-width: 767px) {
     .container .testimeonials .content {
@@ -757,6 +811,10 @@ body {
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 .container .testimeonials  ul {
     display: flex;
@@ -769,6 +827,10 @@ body {
     border: 1px solid #ccc;
     border-radius: 50%;
     margin-right: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .container .testimeonials .bulluts li.active {
     background-color:var(--main-color) ;
@@ -812,6 +874,10 @@ body {
     border-radius: 4px;
     width: 40px;
     text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 .container .skill .prog-holder .prog span::after {
     content: '';
@@ -833,6 +899,15 @@ body {
     text-align: center;
     color: white;
     height: 40vh;
+    overflow: hidden;
+}
+@media (max-width: 767px) {
+    .quote {
+        height: 60vh;
+    }
+    .quote q {
+
+    }
 }
 .quote::before {
     content: '';
@@ -863,6 +938,7 @@ body {
 .pricing {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
+    overflow: hidden;
 }
 
 .pricing .container .plans {
@@ -923,6 +999,10 @@ body {
     top: 80%;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 .pricing .plan .foot a {
     padding: 20px;
@@ -964,6 +1044,7 @@ body {
     position: relative;
     height: 30vh;
     color: white;
+    overflow: hidden;
 }
 @media (max-width: 767px) {
     .subscribe {
@@ -1005,7 +1086,7 @@ body {
 }
 @media (max-width: 767px) {
     .subscribe .container form {
-        width: 400px;
+        width: 300px;
     }
 }
 .subscribe .container form i {
@@ -1013,6 +1094,10 @@ body {
     top: 50%;
     transform: translateY(-50%);
     left: 15px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 @media (max-width: 767px) {
     .subscribe .container form i {
