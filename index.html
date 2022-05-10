@@ -7,7 +7,6 @@
     <title>Kasper</title>
     <link rel="stylesheet" href="css/normalze.css">    
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/all.css">
         <link rel="stylesheet" href="css/kasper.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +26,7 @@
                 <ul>
                     <li><a href="#" class="active" data-scroll="home">Home</a></li>
                     <li><a href="#" data-scroll="services">Services</a></li>
-                    <li><a href="#" data-scroll="portfilo">Protoflio</a></li>
+                    <li><a href="#" data-scroll="portfilo">portfolio</a></li>
                     <li><a href="#" data-scroll="about">About</a></li>
                     <li><a href="#" data-scroll="pricing">Pricing</a></li>
                     <li><a href="#" data-scroll="contact">Contact</a></li>
@@ -42,24 +41,129 @@
     <!-- End header -->
     <!-- Start landing -->
     <div class="landing" id="home">
-        <div class="overlay"></div>
-        <div class="text">
-            <div class="content">
-                <h1>Hello WORLD! <br>
-                    WE ARE KASPER, WE MAKE ART.
-                </h1>
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, debitis molestias enim iste hic deserunt corporis voluptas, rem at blanditiis modi earum maxime molestiae. Possimus est delectus deleniti impedit tenetur. </P>
+        <div class="slider-wrap">
+            <div class="slider-1 slide">
+                <div class="overlay"></div>
+                <div class="text">
+                    <div class="content">
+                        <h1>Hello WORLD! <br>
+                            WE ARE KASPER, WE MAKE ART.
+                        </h1>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, debitis molestias enim iste hic deserunt corporis voluptas, rem at blanditiis modi earum maxime molestiae. Possimus est delectus deleniti impedit tenetur. </P>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="prev" onclick="prev()">
+                        <i class="fas fa-angle-left fa-2x" aria-hidden="true"></i>
+                    </button>
+                    <button class="next" onclick="next()">
+                        <i class="fas fa-angle-right fa-2x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="bullets">
+                    <li class="active" data-img="img-2"></li>
+                    <li data-img="img-1"></li>
+                    <li data-img="img-3"></li>
+                    <li data-img="img-4"></li>
+                </ul>
+            </div>
+            <div class="slider-2 slide">
+                <div class="overlay"></div>
+                <div class="text">
+                    <div class="content">
+                        <h1>Hello WORLD! <br>
+                            WE ARE KASPER, WE MAKE ART.
+                        </h1>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, debitis molestias enim iste hic deserunt corporis voluptas, rem at blanditiis modi earum maxime molestiae. Possimus est delectus deleniti impedit tenetur. </P>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="prev" onclick="prev()">
+                        <i class="fas fa-angle-left fa-2x" aria-hidden="true"></i>
+                    </button>
+                    <button class="next" onclick="next()">
+                        <i class="fas fa-angle-right fa-2x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="bullets">
+                    <li data-img="img-1"></li>
+                    <li class="active" data-img="img-2"></li>
+                    <li data-img="img-3"></li>
+                    <li data-img="img-4"></li>
+                </ul>
+            </div>
+            <div class="slider-3 slide">
+                <div class="overlay"></div>
+                <div class="text">
+                    <div class="content">
+                        <h1>Hello WORLD! <br>
+                            WE ARE KASPER, WE MAKE ART.
+                        </h1>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, debitis molestias enim iste hic deserunt corporis voluptas, rem at blanditiis modi earum maxime molestiae. Possimus est delectus deleniti impedit tenetur. </P>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="prev" onclick="prev()">
+                        <i class="fas fa-angle-left fa-2x" aria-hidden="true"></i>
+                    </button>
+                    <button class="next" onclick="next()">
+                        <i class="fas fa-angle-right fa-2x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="bullets">
+                    <li data-img="img-1"></li>
+                    <li data-img="img-2"></li>
+                    <li  class="active" data-img="img-3"></li>
+                    <li data-img="img-4"></li>
+                </ul>
+            </div>
+            <div class="slider-4 slide">
+                <div class="overlay"></div>
+                <div class="text">
+                    <div class="content">
+                        <h1>Hello WORLD! <br>
+                            WE ARE KASPER, WE MAKE ART.
+                        </h1>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, debitis molestias enim iste hic deserunt corporis voluptas, rem at blanditiis modi earum maxime molestiae. Possimus est delectus deleniti impedit tenetur. </P>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="prev" onclick="prev()">
+                        <i class="fas fa-angle-left fa-2x" aria-hidden="true"></i>
+                    </button>
+                    <button class="next" onclick="next()">
+                        <i class="fas fa-angle-right fa-2x" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="bullets">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="active"></li>
+                </ul>
             </div>
         </div>
-        <i class="fas fa-angle-left change-backround fa-2x left"></i>
-        <i class="fas fa-angle-right change-backround fa-2x right"></i>
-        <ul class="bullets">
-            <li></li>
-            <li class="active"></li>
-            <li></li>
-        </ul>
     </div>
     <!-- End landing -->
+    <!-- Start Box Model  -->
+    <div class="box-model">
+        <div class="container">
+            <div class="icon">
+                <i class="fas fa-cog"></i>
+            </div>
+            <div class="color">
+                <h4>change default color</h4>
+                <ul>
+                    <li data-color="one"></li>
+                    <li data-color="two"></li>
+                    <li data-color="three"></li>
+                    <li data-color="four"></li>
+                    <li data-color="five"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Box Model  -->
     <!-- Start Services -->
     <div class="services" id="services">
         <div class="container">
@@ -111,19 +215,19 @@
             <h2>Our Design Comes With...</h2>
             <ul>
                 <li>
-                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-computer"></i>
                     Responsive Design
                 </li>
                 <li>
-                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-computer"></i>
                     Modern And Clean Design
                 </li>
                 <li>
-                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-computer"></i>
                     Clean Code
                 </li>
                 <li>
-                    <i class="fas fa-desktop"></i>
+                    <i class="fas fa-mobile-screen"></i>
                     Browser Friendly
                 </li>
             </ul>
