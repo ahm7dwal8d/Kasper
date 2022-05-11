@@ -76,7 +76,31 @@ $(".landing .bullets li").click(function () {
 
 })
 
+$(window).ready(function () {
 
+    $(".landing .hidden").animate({
+
+        opacity: 1
+
+    })
+
+    $(".landing .left").delay(300).animate({
+
+        left: 0,
+
+        opacity: 1
+
+    })
+
+    $(".landing .bottom").delay(300).animate({
+
+        bottom: 20,
+
+        opacity: 1
+
+    })
+
+})
 
 // Box Model Section 
 
@@ -108,6 +132,96 @@ for (let i = 0; i < elColor.length; i++) {
     })
 
 }
+
+// services Section 
+
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() >= $(".services").offset().top - 400) {
+
+        $(".services .hidden").animate({
+
+            opacity: 1
+
+        })
+
+        $(".services .left").animate({
+
+            left: 0,
+
+            opacity: 1
+
+        }).delay(300)
+
+        $(".services .right").animate({
+
+            right: 0,
+
+            opacity: 1
+
+        }).delay(300)
+
+        $(".services .top").animate({
+
+            top: 0,
+
+            opacity: 1
+
+        }).delay(300)
+
+        $(".services .bottom").animate({
+
+            bottom: 0,
+
+            opacity: 1
+
+        }).delay(300)
+
+    }
+
+})
+
+// design Section 
+
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() >= $(".design").offset().top - 400) {
+
+        $(".design .right").animate({
+
+            right: 0,
+
+            opacity: 1
+
+        })
+
+        $(".design .bottom").animate({
+
+            bottom: 0,
+
+            opacity: 1
+
+        })
+
+        $(".design .top").animate({
+
+            top: 0,
+
+            opacity: 1
+
+        })
+
+        $(".design .left").animate({
+
+            left: 0,
+
+            opacity: 1
+
+        })
+
+    }
+
+})
 
 // Portfolio Section 
 
@@ -171,6 +285,76 @@ PortfolioImg.forEach((img)=> {
 
 })
 
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() >= $(".portfolio").offset().top - 400) {
+
+        $(".portfolio .hidden").animate({
+
+            opacity: 1
+
+        })
+
+        $(".portfolio .left").delay(300).animate({
+
+            left: 0,
+
+            opacity: 1
+
+        })
+
+        $(".portfolio .top").delay(400).animate({
+
+            top: 0,
+
+            opacity: 1
+
+        })
+
+        $(".portfolio .right").delay(600).animate({
+
+            right: 0,
+
+            opacity: 1
+
+        })
+
+        $(".portfolio .bottom").delay(200).animate({
+
+            bottom: 0,
+
+            opacity: 1
+
+        })
+
+    }
+
+})
+
+// About Section 
+
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() >= $(".about").offset().top - 400) {
+
+        $(".about .hidden").animate({
+
+            opacity: 1
+
+        })
+
+        $(".about .left").animate({
+
+            left: 0,
+
+            opacity: 1
+
+        })
+
+    }
+
+})
+
 // State Section 
 
 let StateSection = document.querySelector(".state")
@@ -199,6 +383,46 @@ function StartCounter(el) {
 
 }
 
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() >= $(".state").offset().top - 400) {
+
+        $(".state .left").animate({
+
+            left: 0,
+
+            opacity: 1
+
+        })
+
+        $(".state .top").animate({
+
+            top: 0,
+
+            opacity: 1
+
+        })
+
+        $(".state .bottom").animate({
+
+            bottom: 0,
+
+            opacity: 1
+
+        })
+
+        $(".state .right").animate({
+
+            right: 0,
+
+            opacity: 1
+
+        })
+
+    }
+
+})
+
 // Skills Section 
 
 let SkillsSection = document.querySelector(".our-skills")
@@ -207,12 +431,132 @@ let SkillsOffsetTop = SkillsSection.offsetTop;
 
 let SkillsProg = document.querySelectorAll(".our-skills .prog-holder .prog span")
 
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() >= $(".our-skills").offset().top - 400) {
+
+        $(".our-skills .left").animate({
+
+            left: 0,
+
+            opacity: 1
+
+        })
+
+        $(".our-skills .right").animate({
+
+            right: 0,
+
+            opacity: 1
+
+        })
+
+        $(".our-skills .top").animate({
+
+            top: 0,
+
+            opacity: 1
+
+        })
+
+        $(".our-skills .bottom").animate({
+
+            bottom: 0,
+
+            opacity: 1
+
+        })
+
+    }
+
+})
+
+// pricing Section 
+
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() >= $(".pricing").offset().top - 400) {
+
+        $(".pricing .hidden").animate({
+
+            opacity: 1
+
+        })
+
+        $(".pricing .top").animate({
+
+            top: 0,
+
+            opacity: 1
+
+        })
+
+        $(".pricing .bottom").animate({
+
+            bottom: 0,
+
+            opacity: 1
+
+        })
+
+    }
+
+})
+
+// Contact Section 
+
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() >= $(".contact-us").offset().top - 400) {
+
+        $(".contact-us .hidden").animate({
+
+            opacity: 1
+
+        })
+
+        $(".contact-us .top").animate({
+
+            top: 0,
+
+            opacity: 1
+
+        })
+
+        $(".contact-us .right").animate({
+
+            right: 0,
+
+            opacity: 1
+
+        })
+
+        $(".contact-us .left").animate({
+
+            left: 0,
+
+            opacity: 1
+
+        })
+
+        $(".contact-us .bottom").animate({
+
+            bottom: 0,
+
+            opacity: 1
+
+        })
+
+    }
+
+})
+
 
 window.onscroll = function () {
 
     // State Section 
 
-    if (window.scrollY >= StateOffsetTop) {
+    if (window.scrollY >= StateOffsetTop - 400) {
 
         if (!Started) {
 
@@ -231,7 +575,7 @@ window.onscroll = function () {
 
     // Skills Section 
 
-    if (window.scrollY >= SkillsOffsetTop) {
+    if (window.scrollY >= SkillsOffsetTop - 400) {
 
         SkillsProg.forEach((span)=> {
 

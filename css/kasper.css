@@ -114,6 +114,29 @@ body {
         width: 1350px;
     }
 } 
+.hidden {
+    opacity: 0;
+}
+.left {
+    position: relative;
+    left: -500px;
+    opacity: 0;
+}
+.right {
+    position: relative;
+    right: -500px;
+    opacity: 0;
+}
+.top {
+    position: relative;
+    top: -500px;
+    opacity: 0;
+}
+.bottom {
+    position: relative;
+    bottom: -500px;
+    opacity: 0;
+}
 /* Start Global Rules */
 /* Start Header */
 .header {
@@ -433,6 +456,7 @@ body {
     color: #fff;
 }
 .box-model .icon i {
+    font-size: 19px;
     animation: rounded 1s linear infinite;
     -webkit-animation: rounded 1s linear infinite;
 }
@@ -601,11 +625,7 @@ body {
 
 .container .shuffled ul li {
     padding: 10px;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
+    background-color: rgba(238, 238, 238, 0.747);
     cursor: pointer;
 }
 .container .shuffled ul li:hover {
@@ -1088,6 +1108,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    position: relative;
 }
 .pricing .plans .plan {
     text-align: center;
@@ -1311,6 +1332,7 @@ body {
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
     position: relative;
+    overflow: hidden;
 }
 .contact-us .content {
     display: flex;
