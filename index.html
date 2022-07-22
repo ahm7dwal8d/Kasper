@@ -145,21 +145,36 @@
     </div>
     <!-- End landing -->
     <!-- Start Box Model  -->
-    <div class="box-model">
-        <div class="container">
+    <div class="setting-box">
             <div class="icon">
                 <i class="fas fa-cog"></i>
             </div>
-            <div class="color">
-                <h4>change default color</h4>
+            <div class="color option">
+                <h4>change color</h4>
                 <ul>
-                    <li data-color="one"></li>
-                    <li data-color="two"></li>
-                    <li data-color="three"></li>
-                    <li data-color="four"></li>
-                    <li data-color="five"></li>
+                    <li class="active" data-color="#19c8fa"></li>
+                    <li data-color="#f44336"></li>
+                    <li data-color="#e91e63"></li>
+                    <li data-color="#ff9800"></li>
+                    <li data-color="#673ab7"></li>
                 </ul>
-            </div>
+        </div>
+        <div class="random option">
+            <h4>make random</h4>
+            <ul>
+                <li data-slider="true">yes</li>
+                <li class="active" data-slider="false">no</li>
+            </ul>
+        </div>
+        <div class="theme option">
+            <h4>change background</h4>
+            <ul>
+                <li class="active" data-theme="#fff">light</li>
+                <li data-theme="#9f9a9a63">dark</li>
+            </ul>
+        </div>
+        <div class="reset option">
+            <button>reset option</button>
         </div>
     </div>
     <!-- End Box Model  -->

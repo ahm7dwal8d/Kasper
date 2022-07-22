@@ -1,10 +1,139 @@
-// Header Section 
+// Box Model Section 
+
+let settingBox = document.querySelector(".setting-box")
+let settingIcon = document.querySelector(".setting-box .icon")
+
+settingIcon.addEventListener("click", function () {
+    settingBox.classList.toggle("active")
+    this.classList.toggle("active")
+})
+
+let colorEl = document.querySelectorAll(".setting-box .color li")
+
+let mainColor = localStorage.getItem("color-option")
+
+if (mainColor !== null) {
+    colorEl.forEach((el) => {
+        el.classList.remove("active")
+        if (el.dataset.color === mainColor) {
+            el.classList.add("active")
+            document.documentElement.style.setProperty("--main-color", mainColor)
+        }
+    })
+}
+
+colorEl.forEach((el) => {
+    el.addEventListener("click", function (e) {
+        colorEl.forEach((el) => {
+            el.classList.remove("active")
+            this.classList.add("active")
+        })
+        document.documentElement.style.setProperty("--main-color", e.target.dataset.color)
+        localStorage.setItem("color-option", e.target.dataset.color)
+    })
+})
+
+let randomStatus;
+let sliderInterval;
+let randomEl = document.querySelectorAll(".setting-box .random li")
+
+let mainSlider = localStorage.getItem("random-option")
+
+if (mainSlider !== null) {
+    randomEl.forEach((el) => {
+        el.classList.remove("active")
+        if (el.dataset.slider === mainSlider) {
+            el.classList.add("active")
+        }
+    })
+    if (mainSlider === "true") {
+        randomStatus = true;    
+    } else {
+        randomStatus = false
+    }
+}
+
+randomEl.forEach((el) => {
+    el.addEventListener("click", function (e) {
+        randomEl.forEach((el) => {
+            el.classList.remove("active")
+            this.classList.add("active")
+        })
+        randomStatus = e.target.dataset.slider 
+        if (e.target.dataset.slider === "true") {
+            randomStatus = true;
+            randomSlider()
+        localStorage.setItem("random-option", true)
+        } else {
+            randomStatus = false;
+            clearInterval(sliderInterval)
+            localStorage.setItem("random-option", false)
+        }
+    })
+})
 
 
-$(".header .link > i").click(function () {
+function randomSlider () {
+    if (randomStatus === true) {
+        sliderInterval = setInterval(() => {
+            sliderWrap.append(slider[0])
+        }, 1000)
+    }
+}
+randomSlider()
 
-    $(".header .link ul").slideToggle()
+let themeEl = document.querySelectorAll(".setting-box .theme li")
 
+let mainBackground = localStorage.getItem("theme-option")
+
+if (mainBackground !== null) {
+    themeEl.forEach((el) => {
+        el.classList.remove("active")
+        if (el.dataset.theme === mainBackground) {
+            el.classList.add("active")
+        }
+        document.body.style.backgroundColor = mainBackground
+    })
+}
+
+themeEl.forEach((el) => {
+    el.addEventListener("click", function (e) {
+        themeEl.forEach((el) => {
+            el.classList.remove("active")
+            this.classList.add("active")
+        })
+        document.body.style.backgroundColor = e.target.dataset.theme
+        localStorage.setItem("theme-option", e.target.dataset.theme)
+    })
+})
+
+let resetButton = document.querySelector(".setting-box button")
+
+resetButton.addEventListener("click", function () {
+    localStorage.removeItem("color-option")
+    localStorage.removeItem("random-option")
+    localStorage.removeItem("theme-option")
+    window.location.reload()
+})
+// Header Section
+let headerUl = document.querySelector(".header ul")
+let burgerIcon = document.querySelector(".header .bar")
+
+burgerIcon.addEventListener("click", function () {
+    let overly = document.createElement("div")
+    overly.className = "header-overly"
+    document.body.appendChild(overly)
+    overly.appendChild(headerUl)
+    let closeButton = document.createElement("span")
+    closeButton.className = "close-button"
+    let closeButtonText = document.createTextNode("X")
+    closeButton.appendChild(closeButtonText)
+    overly.appendChild(closeButton)
+    document.addEventListener("click", function (e) {
+        if (e.target.className === "close-button" || e.target.className === "header-overly") {
+            overly.remove()
+        }
+    })
 })
 
 $(".header ul li a").click(function (event) {
@@ -12,8 +141,6 @@ $(".header ul li a").click(function (event) {
     event.preventDefault()
 
     $(this).addClass("active").parent().siblings().find("a").removeClass("active")
-
-    console.log()
 
     $("html , body").animate({
 
@@ -39,20 +166,7 @@ $(window).scroll(function () {
 
 // Landing Section 
 
-let landingSlide = document.querySelectorAll(".landing .slide")
 
-let landingArrey = ["landing.jpg" , "landing-2.jpg" , "landing-3.jpg" , "landing-4.jpg"]
-
-landingSlide.forEach((slide)=> {
-
-    setInterval(function () {
-
-        let randomNumber = Math.floor(Math.random() * landingArrey.length)
-
-        slide.style.backgroundImage = "url(images/"+ landingArrey[randomNumber] +")"
-
-    } , 10000)
-})
 
 let sliderWrap = document.querySelector(".landing .slider-wrap")
 
@@ -63,7 +177,6 @@ function next() {
     sliderWrap.append(slider[0])
 
 }
-
 function prev() {
 
     sliderWrap.prepend(slider[slider.length - 1])
@@ -102,36 +215,6 @@ $(window).ready(function () {
 
 })
 
-// Box Model Section 
-
-$(".box-model .icon").click(function () {
-
-    $(".box-model").toggleClass("active")
-
-})
-
-document.body.classList.add(localStorage.getItem("bodyColor"))
-
-let elColor = document.querySelectorAll(".box-model .color ul li")
-
-let bodyColor = []
-
-
-for (let i = 0; i < elColor.length; i++) {
-
-    bodyColor.push(elColor[i].getAttribute("data-color"))
-
-    elColor[i].addEventListener("click" , function () {
-
-        document.body.classList.remove(...bodyColor)
-
-        document.body.classList.add(elColor[i].getAttribute("data-color"))
-
-        localStorage.setItem("bodyColor" , elColor[i].getAttribute("data-color"))
-
-    })
-
-}
 
 // services Section 
 
@@ -225,15 +308,20 @@ $(window).scroll(function () {
 
 // Portfolio Section 
 
-$(".portfolio .shuffled ul li").click(function () {
+let portfolioHead = document.querySelectorAll(".portfolio ul li")
+let portfolioBox = document.querySelectorAll(".portfolio .box")
 
-    $(this).addClass("active").siblings().removeClass("active")
-
-    var Fillter = $(this).data("class")
-
-    $(".portfolio .imges-container .box").fadeOut()
-
-    $(".portfolio .imges-container " + Fillter ).fadeIn()
+portfolioHead.forEach((li) => {
+    li.addEventListener("click", function () {
+        portfolioHead.forEach((li) => {
+            li.classList.remove("active")
+            this.classList.add("active")
+        })
+        portfolioBox.forEach((box) => {
+            box.style.display = "none"
+        })
+        document.querySelectorAll(li.dataset.class).forEach((e) => e.style.display = "block")
+    })
 })
 
 let PortfolioImg = document.querySelectorAll(".portfolio img")
@@ -253,6 +341,20 @@ PortfolioImg.forEach((img)=> {
         BoxImg.className = "Box-img"
     
         OverlyBox.appendChild(BoxImg)
+
+        if (img.alt !== "") {
+
+            let head = document.createElement("h3")
+
+            head.className = "box-head"
+
+            BoxImg.appendChild(head)
+
+            let headText = document.createTextNode(img.alt)
+
+            head.appendChild(headText)
+
+        }
     
         let ImgBox = document.createElement("img")
     
@@ -272,12 +374,10 @@ PortfolioImg.forEach((img)=> {
 
         document.addEventListener("click" , function (el) {
 
-            if (el.target.className === "close-button") {
-
-                BoxImg.remove()
+            if (el.target.className === "close-button" || el.target.className === "overly-box") {
 
                 OverlyBox.remove()
-                
+
             }
             
         })
